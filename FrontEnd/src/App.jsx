@@ -27,7 +27,7 @@ function App() {
     setError("");
     setReview(null);
     try {
-      const response = await axios.post("http://localhost:3000/ai/get-review", { code });
+      const response = await axios.post("https://ai-code-reviewer-backend-q39x.onrender.com/ai/get-review", { code });
       setReview(response.data);
       fetchHistory();
     } catch {
@@ -39,7 +39,7 @@ function App() {
 
   async function fetchHistory() {
     try {
-      const response = await axios.get("http://localhost:3000/ai/history");
+      const response = await axios.get("https://ai-code-reviewer-backend-q39x.onrender.com/ai/history");
       setHistory(response.data);
     } catch {
       console.error("Failed to fetch history");
