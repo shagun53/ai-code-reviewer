@@ -1,5 +1,4 @@
 const OpenAI = require("openai");
-require('dotenv').config();
 
 const groq = new OpenAI({
     apiKey: process.env.GROQ_API_KEY,
